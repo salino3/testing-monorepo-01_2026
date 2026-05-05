@@ -1,12 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import { useShallow } from "zustand/react/shallow";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import heroImg from "./assets/hero.png";
+import { type User } from "@project/shared-types";
+import { useUserStore, type UserStore } from "./store/use-user-store";
+import "./App.scss";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { user, isAuthenticated, loading } = useUserStore(
+    useShallow((state: UserStore) => ({
+      user: state.user,
+      isAuthenticated: state.isAuthenticated,
+      loading: state.loading,
+    })),
+  );
+  const [userData, setUserData] = useState<User | null>(user);
+  const [count, setCount] = useState(0);
+  console.log("clog1", userData);
   return (
     <>
       <section id="center">
@@ -16,7 +27,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1 className="text-test-01">Get started</h1>
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
@@ -116,7 +127,7 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
