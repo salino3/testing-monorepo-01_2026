@@ -5,7 +5,7 @@ import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import { type User } from "@project/shared-types";
 import { useUserStore, type UserStore } from "./store/use-user-store";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const { user, isAuthenticated, loading } = useUserStore(
@@ -27,7 +27,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1 className="text-test-01">Get started</h1>
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
