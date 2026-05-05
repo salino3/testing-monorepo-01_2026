@@ -1,14 +1,23 @@
 import { useState } from "react";
+import { useShallow } from "zustand/react/shallow";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import { type User } from "@project/shared-types";
+import { useUserStore, type UserStore } from "./store/use-user-store";
 import "./App.css";
 
 function App() {
-  const [userData, setUserData] = useState<User | null>(null);
+  const { user, isAuthenticated, loading } = useUserStore(
+    useShallow((state: UserStore) => ({
+      user: state.user,
+      isAuthenticated: state.isAuthenticated,
+      loading: state.loading,
+    })),
+  );
+  const [userData, setUserData] = useState<User | null>(user);
   const [count, setCount] = useState(0);
-
+  console.log("clog1", userData);
   return (
     <>
       <section id="center">

@@ -3,17 +3,31 @@ import { immer } from "zustand/middleware/immer";
 import { type User } from "@project/shared-types";
 import { persist, createJSONStorage } from "zustand/middleware";
 
-interface UserState {
+export interface UserState {
   user: User | null;
   isAuthenticated: boolean;
   loading: boolean;
 }
 
-export const useUserStore = create<UserState>()(
+export interface UserStore {
+  user: User | null;
+  isAuthenticated: boolean;
+  loading: boolean;
+  setUser: (user: User) => unknown;
+  logout: () => unknown;
+  setLoading: (isLoading: boolean) => unknown;
+}
+
+export const useUserStore = create<UserStore>()(
   persist(
     immer((set) => ({
       // Stato Iniziale
-      user: null,
+      user: {
+        email: "email@gmail,com",
+        id: "sh7B",
+        createdAt: new Date(),
+        username: "Joe",
+      },
       isAuthenticated: false,
       loading: false,
 

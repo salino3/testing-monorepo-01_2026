@@ -1,8 +1,66 @@
 {
-  "hash": "b06a6db7",
+  "hash": "6be9a1cf",
   "configHash": "e60c8b56",
-  "lockfileHash": "4f146073",
-  "browserHash": "09eb70b4",
-  "optimized": {},
-  "chunks": {}
+  "lockfileHash": "dd9c504b",
+  "browserHash": "b1843d9c",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../../../node_modules/.pnpm/react-dom@19.2.5_react@19.2.5/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "6e4671bf",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../../../node_modules/.pnpm/react@19.2.5/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "98965a44",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../../../node_modules/.pnpm/react@19.2.5/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "afcc3aab",
+      "needsInterop": true
+    },
+    "zustand": {
+      "src": "../../../../node_modules/.pnpm/zustand@5.0.13_@types+react_c576269d8b0e75a3ff1d0c028e1c06fd/node_modules/zustand/esm/index.mjs",
+      "file": "zustand.js",
+      "fileHash": "48e32dc5",
+      "needsInterop": false
+    },
+    "zustand/middleware": {
+      "src": "../../../../node_modules/.pnpm/zustand@5.0.13_@types+react_c576269d8b0e75a3ff1d0c028e1c06fd/node_modules/zustand/esm/middleware.mjs",
+      "file": "zustand_middleware.js",
+      "fileHash": "9f961322",
+      "needsInterop": false
+    },
+    "zustand/middleware/immer": {
+      "src": "../../../../node_modules/.pnpm/zustand@5.0.13_@types+react_c576269d8b0e75a3ff1d0c028e1c06fd/node_modules/zustand/esm/middleware/immer.mjs",
+      "file": "zustand_middleware_immer.js",
+      "fileHash": "61a534a1",
+      "needsInterop": false
+    },
+    "zustand/react/shallow": {
+      "src": "../../../../node_modules/.pnpm/zustand@5.0.13_@types+react_c576269d8b0e75a3ff1d0c028e1c06fd/node_modules/zustand/esm/react/shallow.mjs",
+      "file": "zustand_react_shallow.js",
+      "fileHash": "7f2ee27c",
+      "needsInterop": false
+    },
+    "zustand/shallow": {
+      "src": "../../../../node_modules/.pnpm/zustand@5.0.13_@types+react_c576269d8b0e75a3ff1d0c028e1c06fd/node_modules/zustand/esm/shallow.mjs",
+      "file": "zustand_shallow.js",
+      "fileHash": "41be49d4",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "react-D5jdVkJj": {
+      "file": "react-D5jdVkJj.js",
+      "isDynamicEntry": false
+    },
+    "shallow-CgOuPHBH": {
+      "file": "shallow-CgOuPHBH.js",
+      "isDynamicEntry": false
+    }
+  }
 }
