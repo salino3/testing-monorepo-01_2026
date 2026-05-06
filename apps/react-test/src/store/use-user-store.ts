@@ -21,12 +21,12 @@ export interface UserStore {
 export const useUserStore = create<UserStore>()(
   persist(
     immer((set) => ({
-      // Stato Iniziale
+      // Initial state
       user: null,
       isAuthenticated: false,
       loading: false,
 
-      // Azioni
+      // Action
       setUser: (user: User) =>
         set((state: UserState) => {
           state.user = user;
