@@ -39,10 +39,12 @@ export const useUserStore = create<UserStore>()(
           state.isAuthenticated = false;
         }),
 
+      //* Example without 'immer'
       setLoading: (isLoading: boolean) =>
-        set((state) => {
-          state.loading = isLoading;
-        }),
+        set((state) => ({
+          ...state,
+          loading: isLoading,
+        })),
     })),
     {
       name: "app-storage",
