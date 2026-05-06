@@ -5,6 +5,7 @@ export interface User {
   createdAt: Date;
 }
 
+// Data Transfer Object
 export interface CreateUserDto {
   email: string;
   username: string;
