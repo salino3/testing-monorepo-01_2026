@@ -22,12 +22,7 @@ export const useUserStore = create<UserStore>()(
   persist(
     immer((set) => ({
       // Stato Iniziale
-      user: {
-        email: "email@gmail,com",
-        id: "sh7B",
-        createdAt: new Date(),
-        username: "Joe",
-      },
+      user: null,
       isAuthenticated: false,
       loading: false,
 
