@@ -28,19 +28,19 @@ export const useUserStore = create<UserStore>()(
 
       // Action
       setUser: (user: User) =>
-        set((state: UserState) => {
+        set((state) => {
           state.user = user;
           state.isAuthenticated = true;
         }),
 
       logout: () =>
-        set((state: UserState) => {
+        set((state) => {
           state.user = null;
           state.isAuthenticated = false;
         }),
 
       setLoading: (isLoading: boolean) =>
-        set((state: UserState) => {
+        set((state) => {
           state.loading = isLoading;
         }),
     })),
