@@ -6,6 +6,8 @@ settings:
 
 importers:
 
+  .: {}
+
   apps/api-backend:
     dependencies:
       '@nestjs/common':
